@@ -1,6 +1,9 @@
 #!python3
-
+from x01_deck import createDeck
+print(createDeck())
 def value(hand):
+  hand = []
+
   '''
   input:
   list hand: hand is a list of strings that contains the cards in the hand
