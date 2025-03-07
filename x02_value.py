@@ -10,24 +10,37 @@ hand = makehand(deck)
 print(hand)
 
 def value(hand):
-  valN = 0
-  if "A" in hand:
-
-  else:
-    for i in hand:
+  #hand[1] = input()
+  #hand[2] = input()
+  Val = [0,0]
+  for i in hand:
     print(i , i[1])
     if i[1].isnumeric():
-      valN += int(i[1])
-    elif i[1] == "K" or i[1] == "Q" or i[1] == "J":
-      valN += 10
-  
+      Val[0]+= int(i[1])
+      Val[1]+= int(i[1])
+    elif i[1] == "K" or i[1] == "Q" or i[1] == "J" or i[1] == "T":
+      Val[0] += 10
+      Val[1] += 10
+    elif i[1] == "A":
+      Val[0] += 1
+      Val[1] += 11
+  if Val[0] == Val[1]:
+    print(Val[0])
+    return Val[0]
+  elif Val[0]< 21 and Val[1] > 21:
+    print(Val[0])
+    return Val[0] 
+  else: 
+    print(Val)
+    return Val
 
-  print(valN)
+
+
     
 
 
 
-print(value(hand))
+value(hand)
 
 '''
   input:
