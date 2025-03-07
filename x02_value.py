@@ -3,8 +3,12 @@ from x01_deck import createDeck
 deck = createDeck()
 def makehand(deck):
   import random
-  hand = [deck.pop(random.randint(0,51)),deck.pop(random.randint(0,51))]
+  a = random.randint(0,len(deck)-1)
+  b=random.randint(0,len(deck)-2)
+  print(a,len(deck),b,len(deck))
+  hand = [deck.pop(a),deck.pop(b)]
   return  hand
+
 
 hand = makehand(deck)
 print(hand)
@@ -37,6 +41,7 @@ def value(hand):
 
 
     
+
 
 
 

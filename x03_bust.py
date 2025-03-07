@@ -4,8 +4,24 @@
 In Blackjack, having a score over 21 is an automatic loss.
 Create a function that determines if the score is a bust
 '''
-
-def busts(score):
+"""from x01_deck import createDeck
+deck = createDeck()
+from x02_value import makehand
+hand = makehand(deck)
+from x02_value import value"""
+"Val = value(hand)"
+def busts(Val):
+  if type(Val) == list:
+    if Val[0] > 21:
+      bust = True
+    else:
+      bust = False
+  else:
+    if Val > 21:
+      bust = True
+    else:
+      bust = False
+  return bust
   '''
   inputs:
   int score:  determined by another function

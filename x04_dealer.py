@@ -6,10 +6,28 @@ In Blackjack, the dealer always must follow the same rules.
 1. They will stand pat (not take new cards) if their score is over 16
 2. They will automatically take a new card if their score is less than 17
 '''
-
+from x01_deck import createDeck
+deck = createDeck()
+from x02_value import value
+from x02_value import busts
 def dealer(deck):
+  import random
   dealer = []
   score = 0
+  a = random.randint(0,len(deck)-1)
+  b = random.randint(0,len(deck)-2)
+  dealer = [deck.pop(a),deck.pop(b)]
+  score = value(dealer)
+
+  if type(score) == list:
+    if 
+  bust = busts(score)
+  while score <=16 and bust == False:
+  print(dealer,score,deck)
+
+
+
+
   ''' 
   inputs:
   list deck: contains a shuffled list of cards
