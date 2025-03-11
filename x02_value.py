@@ -5,7 +5,7 @@ def makehand(deck):
   import random
   a = random.randint(0,len(deck)-1)
   b=random.randint(0,len(deck)-2)
-  print(a,len(deck),b,len(deck))
+  #print(a,len(deck),b,len(deck))
   hand = [deck.pop(a),deck.pop(b)]
   return  hand
 
@@ -18,7 +18,7 @@ def value(hand):
   #hand[2] = input()
   Val = [0,0]
   for i in hand:
-    print(i , i[1])
+    #print(i , i[1])
     if i[1].isnumeric():
       Val[0]+= int(i[1])
       Val[1]+= int(i[1])
