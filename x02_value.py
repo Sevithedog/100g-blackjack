@@ -11,7 +11,7 @@ def makehand(deck):
 
 
 hand = makehand(deck)
-print(hand)
+#print(hand)
 
 def value(hand):
   #hand[1] = input()
@@ -29,13 +29,13 @@ def value(hand):
       Val[0] += 1
       Val[1] += 11
   if Val[0] == Val[1]:
-    print(Val[0])
+    #print(Val[0])
     return Val[0]
   elif Val[0]< 21 and Val[1] > 21:
-    print(Val[0])
+    #print(Val[0])
     return Val[0] 
   else: 
-    print(Val)
+    #print(Val)
     return Val
 
 

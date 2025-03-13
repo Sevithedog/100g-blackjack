@@ -12,24 +12,24 @@ from x02_value import value
 from x03_bust import busts
 def dealer(deck):
   import random
-  deck = deck
-  dealer = []
-  score = 0
-  a = random.randint(0,len(deck)-1)
-  b = random.randint(0,len(deck)-2)
-  dealer.append(deck.pop(a)) 
-  dealer.append(deck.pop(b))
   #print(dealer)
   score = value(dealer)
   bust = busts(score)
   count = 2
-  while score <=16 and bust == False:
-    count+=1
-    dealer.append(deck.pop(random.randint(0,len(deck)-count)))
-    score = value(dealer)
-  #print(dealer,score,deck)
+  if type(score) == int:
+    while score <= 16 and bust == False and type(score) == int:
+      count+=1
+      dealer.append(deck.pop(random.randint(0,len(deck)-count)))
+      score = value(dealer)
+  if type(score) == list:
+    while score[1] <= 16 and bust == False and type(score) == list:
+      count+=1
+      dealer.append(deck.pop(random.randint(0,len(deck)-count)))
+      score = value(dealer)
+  #print(dealer,score, deck)
+  return [ dealer , score , deck ]
 
-#dealer(deck)
+dealer(deck)
 
 
 ''' 
@@ -46,7 +46,7 @@ def dealer(deck):
   it will then return a list
   '''
   
-  #return [ dealer , score , deck ]
+  
 
 def main():
   deck = ['3C', '3S', '8S', '3D', 'AC', '9H', 'QC', 'TD', 'TH', '8H', '8D', '7C', 'TS', '7D', 'AD', 'QD', 'KC', '6H', 'JH', 'KH', 'QS', '6C', '4H', '7H', '5S', '2S', 'AS', 'AH', '5C', '2D', '2H', '6D', 'TC', '4C', 'JS', 'JC', 'KD', '2C', '4S', '3H', '5H', '7S', 'KS', '5D', 'QH', '6S', '8C', '9D', 'JD', '9S', '9C', '4D']

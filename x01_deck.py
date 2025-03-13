@@ -29,6 +29,6 @@ def main():
   assert "CA" in deck 
   assert "DT" in deck 
   assert len(deck) == 52
-  print(deck)
+  #print(deck)
 if __name__ == "__main__":
   main()
