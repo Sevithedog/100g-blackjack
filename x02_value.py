@@ -48,7 +48,7 @@ def value(hand):
 value(hand)
 
 '''
-  input:
+  input: 5
   list hand: hand is a list of strings that contains the cards in the hand
   eg: ['AH','3D','4S']
   
