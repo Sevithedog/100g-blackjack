@@ -110,11 +110,14 @@ dealer.append(deck.pop(a))
 dealer.append(deck.pop(b))
 print(f"Your hand: {hand}")
 print(f"Dealer card: {dealer[0]}")
-if dealer == 21 and hand == 21:
+svalh = value(hand)
+svald = value(dealer)
+if type(svalh) == list and type(svald) == list and svald[1] == svalh[1] == 21:
   print(f"Dealers cards {dealer}")
   print("Blackjack push")
   exit()
-elif value(hand) == 21:
+
+elif value(hand) == 21 or value(hand[1]) == 21:
   print("Dealer Blackjack")
   exit()
 elif value(dealer) == 21:
